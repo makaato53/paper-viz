@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  orchestrator:
+    build: ./orchestrator
+    depends_on: [redis, summarizer]
+    ports:
+      - "8000:8000"
+
+  summarizer:
+    build: ./summarizer
+    depends_on: [orchestrator]
+    ports:
+      - "8002:8002"
+
+  renderer:
+    build: ./renderer
+    depends_on: [orchestrator]
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./renderer/output:/app/output
+
+  frontend:
+    build: ./frontend
+    depends_on: [orchestrator, summarizer, renderer]
+    ports:
+      - "3000:3000"
