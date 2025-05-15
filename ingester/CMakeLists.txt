@@ -10,5 +10,5 @@ pkg_check_modules(POPPLER REQUIRED poppler-cpp)
 include_directories(${POPPLER_INCLUDE_DIRS})
 link_directories(${POPPLER_LIBRARY_DIRS})
 
-add_executable(pdf_ingest main.cpp)
+add_executable(pdf_ingest src/main.cpp)
 target_link_libraries(pdf_ingest ${POPPLER_LIBRARIES})

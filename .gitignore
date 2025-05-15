@@ -1,0 +1,25 @@
+# IDE and editor folders
+.vscode/
+.idea/
+
+# CMake and build outputs
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Output artifacts
+*.pdf
+output.txt
+output.json
+
+# Node and Python garbage
+node_modules/
+__pycache__/
+*.pyc
+.env
+
+#Build artifacts
+.next/
+node_modules/
