@@ -1,0 +1,3 @@
+/workspaces/paper-viz/build/CMakeFiles/rebuild_cache.dir
+/workspaces/paper-viz/build/CMakeFiles/edit_cache.dir
+/workspaces/paper-viz/build/CMakeFiles/pdf_ingest.dir
